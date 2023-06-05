@@ -1,7 +1,5 @@
-Flask>=1.1
+flask
 tensorflow
 numpy
 requests
 pillow
-Python>=3.9
-
