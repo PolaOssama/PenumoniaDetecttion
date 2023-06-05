@@ -60,7 +60,11 @@ def upload():
         img = tf.keras.preprocessing.image.img_to_array(
             tf.keras.preprocessing.image.load_img(response.content, target_size=(224, 224))
         )
-        
+            # Create a temporary file
+                with tempfile.NamedTemporaryFile(delete=False) as f:
+                    img.save(f, format='JPEG')
+                    temp_path = f.name
+                    os.remove(image_url)
         # Make prediction
         preds = model_predict(img, model)
         
