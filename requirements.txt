@@ -3,5 +3,5 @@ tensorflow
 numpy
 requests
 pillow
-python
+Python>=3.9
 
